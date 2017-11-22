@@ -10,7 +10,7 @@ cons = {   'select_your_language' : "Выберите язык \nSelect your lan
 	         u'Получить информацию об услугах' : [{'message':'1. По телефону 8-800-250-54-43 \n2. Сайт www.clinics.ssmu.ru', 'button text': u'Ссылка на сайт', 'url' :'www.clinics.ssmu.ru' }],
 	         u'Контактные данные' : [{'message' :u'Медицинский центр \"Профессор\"', 'button text': u'Ссылка', 'url' : 'http://www.clinics.ssmu.ru/ru/kldc/' },
 	         {'message' : u'Стоматологический лечебно-образовательный центр', 'button text': u'Ссылка', 'url': 'http://www.clinics.ssmu.ru/ru/pacientu/stomatologija/'},
-	         {'message' : u'Госпитальные клиники', 'button text': u'Ссылка', 'url' : 'http://www.clinics.ssmu.ru/ru/contact/'}]
+	         {'message' : u'Факультетские, госпитальные клиники', 'button text': u'Ссылка', 'url' : 'http://www.clinics.ssmu.ru/ru/pacientu/otdelenija/'}]
 	       },
 
 	'eng' : {'language' : 'English',

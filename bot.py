@@ -5,6 +5,18 @@ import telebot
 import config
 import utils
 from constants import cons
+import cherrypy
+from cherryserver import WebhookServer
+WEBHOOK_HOST = '185.173.94.116'
+WEBHOOK_PORT = 443  # 443, 80, 88, 8443
+WEBHOOK_LISTEN = '0.0.0.0'  
+
+WEBHOOK_SSL_CERT = './webhook_cert.pem'  # certificate path
+WEBHOOK_SSL_PRIV = './webhook_pkey.pem'
+
+WEBHOOK_URL_BASE = "https://%s:%s" % (WEBHOOK_HOST, WEBHOOK_PORT)
+WEBHOOK_URL_PATH = "/%s/" % (config.token)
+
 bot = telebot.TeleBot(config.token)
 
 @bot.message_handler(commands=["start"])
@@ -39,5 +51,14 @@ def send_button(message):
 		keyboard.add(telebot.types.InlineKeyboardButton(text=dic['button text'], url=dic['url']))
 		bot.send_message(chat_id = message.chat.id, text = dic['message'] ,reply_markup = keyboard )
 
-if __name__ == '__main__':
-	bot.polling(none_stop=True)
+bot.remove_webhook()
+bot.set_webhook(url=WEBHOOK_URL_BASE + WEBHOOK_URL_PATH, certificate=open(WEBHOOK_SSL_CERT, 'r'))
+cherrypy.config.update({
+    'server.socket_host': WEBHOOK_LISTEN,
+    'server.socket_port': WEBHOOK_PORT,
+    'server.ssl_module': 'builtin',
+    'server.ssl_certificate': WEBHOOK_SSL_CERT,
+    'server.ssl_private_key': WEBHOOK_SSL_PRIV
+})
+cherrypy.quickstart(WebhookServer(), WEBHOOK_URL_PATH, {'/': {}})
+
