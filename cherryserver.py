@@ -1,3 +1,4 @@
+import cherrypy
 class WebhookServer(object):
     @cherrypy.expose
     def index(self):
