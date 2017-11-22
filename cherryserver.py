@@ -1,4 +1,5 @@
 import cherrypy
+import telebot
 class WebhookServer(object):
     @cherrypy.expose
     def index(self):
