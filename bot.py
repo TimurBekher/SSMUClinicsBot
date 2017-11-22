@@ -13,7 +13,7 @@ def repeat_all_messages(message):
 	keyboard.row(telebot.types.KeyboardButton(cons['ru']['language']))
 	keyboard.row(telebot.types.KeyboardButton(cons['eng']['language']))
 	bot.send_message(chat_id=message.chat.id, text =cons['select_your_language'] , reply_markup= keyboard)
-#русскоязычный блок
+#rus part
 @bot.message_handler(func = lambda message: message.text==cons['ru']['language'])	
 def goal_of_request_ru(message):
 	keyboard = telebot.types.ReplyKeyboardMarkup(row_width = 1, one_time_keyboard = True)
@@ -31,7 +31,7 @@ def send_button(message):
 		elif dic['url']!='None':
 			keyboard.add(telebot.types.InlineKeyboardButton(text=dic['button_text'], url=dic['url']))
 			bot.send_message(chat_id = message.chat.id, text = dic['message'] ,reply_markup = keyboard )
-#англоязычный блок
+#eng part
 @bot.message_handler(func=  lambda message: message.text == cons['eng']['language'])
 def send_button(message):
 		keyboard = telebot.types.InlineKeyboardMarkup()
