@@ -23,7 +23,7 @@ def goal_of_request_ru(message):
 
 @bot.message_handler(func = lambda message: message.text in cons['ru']['goal of request']['answers'])
 def send_button(message):	
-	for i in cons['ru'][str(message.text)]:
+	for i in cons['ru'][message.text]:
 		keyboard = telebot.types.InlineKeyboardMarkup()
 		dic = utils.get_button(i)
 		if dic['url']=='None':
