@@ -3,14 +3,14 @@
 
 cons = {   'select_your_language' : "Выберите язык \nSelect your language",
 
-	'ru': { 'language' : 'Русский',
-	         'goal of request' : { 'question': "Цель обращения", 'answers' : [ "Запись на прием", "Дистанционная консультация", "Контактные данные", 'Получить информацию об услугах']},
-	         'Запись на прием' : [{'message' : 'Позвонить в «Единую справочную службу»\n +7 800 250 54 43',  'button text': 'Запись на прием on-line','url' : 'https://docs.google.com/forms/d/e/1FAIpQLSeScqQbahviJXzEKrOc4H1X3S_z2dazgB9kfvQRaWTJGRRpUA/viewform'}],
-	         'Дистанционная консультация' : [{'message': 'Дистанционная консультация:\n  Телефон: +7(913) 867 8651. \nЭлектронная почта: telemed@ssmu.ru','button text': 'None', 'url' : 'None'}],
-	         'Получить информацию об услугах' : [{'message':'1. По телефону 8-800-250-54-43 \n2. Сайт www.clinics.ssmu.ru', 'button text': 'Ссылка на сайт', 'url' :'www.clinics.ssmu.ru' }],
-	         'Контактные данные' : [{'message' :'Медицинский центр \"Профессор\"', 'button text': 'Ссылка', 'url' : 'http://www.clinics.ssmu.ru/ru/kldc/' },
-	         {'message' : 'Стоматологический лечебно-образовательный центр', 'button text': 'Ссылка', 'url': 'http://www.clinics.ssmu.ru/ru/pacientu/stomatologija/'},
-	         {'message' : 'Госпитальные клиники', 'button text': 'Ссылка', 'url' : 'http://www.clinics.ssmu.ru/ru/contact/'}]
+	'ru': { 'language' : u'Русский',
+	         'goal of request' : { 'question': u"Цель обращения", 'answers' : [ u"Запись на прием", u"Дистанционная консультация", u"Контактные данные", u'Получить информацию об услугах']},
+	         u'Запись на прием' : [{'message' : u'Позвонить в «Единую справочную службу»\n +7 800 250 54 43',  'button text': u'Запись на прием on-line','url' : 'https://docs.google.com/forms/d/e/1FAIpQLSeScqQbahviJXzEKrOc4H1X3S_z2dazgB9kfvQRaWTJGRRpUA/viewform'}],
+	         u'Дистанционная консультация' : [{'message': u'Дистанционная консультация:\n  Телефон: +7(913) 867 8651. \nЭлектронная почта: telemed@ssmu.ru','button text': 'None', 'url' : 'None'}],
+	         u'Получить информацию об услугах' : [{'message':'1. По телефону 8-800-250-54-43 \n2. Сайт www.clinics.ssmu.ru', 'button text': u'Ссылка на сайт', 'url' :'www.clinics.ssmu.ru' }],
+	         u'Контактные данные' : [{'message' :u'Медицинский центр \"Профессор\"', 'button text': u'Ссылка', 'url' : 'http://www.clinics.ssmu.ru/ru/kldc/' },
+	         {'message' : u'Стоматологический лечебно-образовательный центр', 'button text': u'Ссылка', 'url': 'http://www.clinics.ssmu.ru/ru/pacientu/stomatologija/'},
+	         {'message' : u'Госпитальные клиники', 'button text': u'Ссылка', 'url' : 'http://www.clinics.ssmu.ru/ru/contact/'}]
 	       },
 
 	'eng' : {'language' : 'English',
